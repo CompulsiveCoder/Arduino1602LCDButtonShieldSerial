@@ -51,7 +51,10 @@ void loop() {
       lcd.setCursor(0, 1);
       lcd.print(button[readkeypad()]);
 
-//        Serial.print(" - ");
+	if (isDebug)
+	{
+            Serial.print(" - ");
+      }
 
 	Serial.println(button[readkeypad()]);
 }
